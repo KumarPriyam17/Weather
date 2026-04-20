@@ -1,4 +1,4 @@
-// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard Antigravity\app\dashboard\page.tsx
+// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard\app\dashboard\page.tsx
 import * as entry from '../../../../app/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard Antigravity\app\api\weather\favorites\route.ts
+// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard\app\api\weather\favorites\route.ts
 import * as entry from '../../../../../../app/api/weather/favorites/route.js'
 import type { NextRequest } from 'next/server.js'
 

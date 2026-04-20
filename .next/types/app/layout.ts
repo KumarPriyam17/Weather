@@ -1,4 +1,4 @@
-// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard Antigravity\app\layout.tsx
+// File: C:\Users\mailf\Downloads\mini project sem-6\Weather Dashboard\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

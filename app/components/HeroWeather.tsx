@@ -20,6 +20,7 @@ export default function HeroWeather({ data }: HeroWeatherProps) {
     };
 
     return (
+        
         <div className="flex flex-col justify-center h-full p-8 text-white">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,5 @@
 export interface WeatherData {
+    weather: any;
     temperature: number;
     condition: string;
     humidity: number;
