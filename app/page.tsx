@@ -7,8 +7,9 @@ export default function Home() {
   return (
     // <main className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
     <main
-      className={`${inter.className} min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden`}>
-      {" "}
+      style={{ fontFamily: "cursive" }}
+      className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-800 via-blue-900 to-black" /> */}
@@ -18,10 +19,12 @@ export default function Home() {
       </div>
       <div className="z-10 w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-white mb-2 tracking-tight">
+          {/* <h1 className="text-5xl font-bold text-white mb-2 tracking-tight"> */}
+          <h1 className="text-5xl font-semibold text-white mb-2 tracking-tight">
             MAUSAM
           </h1>
-          <p className="text-white/120 font-bold text-lg">
+          {/* <p className="text-white/120 font-bold text-lg"> */}
+          <p className="text-white/80 font-medium text-lg">
             Weather Intelligence
           </p>
         </div>
