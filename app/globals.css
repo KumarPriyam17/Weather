@@ -1,69 +1,155 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-body {
-  font-family: 'Inter', sans-serif;
+
+/* ========================= */
+/* GLOBAL RESET / BASE */
+/* ========================= */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
-:root {
-  --bg-dark: #25282D;
-  --bg-panel: #3A3E43;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A6A8AC;
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(255, 255, 255, 0.03);
+/* ========================= */
+/* GLASS HEADER (MAIN BAR) */
+/* ========================= */
+.glass-header {
+  width: 100%;
+  max-width: 950px;
+  padding: 42px 60px 28px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 0 18px rgba(173, 216, 255, 0.12);
 }
 
-body {
-  color: var(--text-primary);
-  background: linear-gradient(180deg, #25282D 0%, #474A4F 100%);
-  min-height: 100vh;
-  overflow-x: hidden;
+
+/* ========================= */
+/* TOP SHINE STRIP */
+/* ========================= */
+.glass-header::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 160%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255,255,255,0.22) 40%,
+    transparent 60%
+  );
+  transform: rotate(8deg);
+  filter: blur(10px);
+  pointer-events: none;
 }
 
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+
+/* ========================= */
+/* TITLE (GLOBAL CAST) */
+/* ========================= */
+/* TITLE */
+.title-stroke,
+.global-cast {
+  position: relative;
+  font-size: clamp(4rem, 8vw, 6.2rem);
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.95);
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.28),
+    0 0 18px rgba(255,255,255,0.18);
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.global-cast {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #f5f7fa;
+
+  /* DARK OUTLINE */
+  -webkit-text-stroke: 1.2px #1a1a1a;
+
+  /* CLEAN GLOW (not blurry) */
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.5),
+    0 0 12px rgba(255,255,255,0.2);
 }
 
-.glass-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.08);
+.title-stroke::after {
+  /* content: "GLOBAL CAST"; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  /* shine gradient */
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.9) 50%,
+    transparent 60%
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shine 4s infinite linear;
 }
 
-.glass-input {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--glass-border);
-  color: white;
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+/* ========================= */
+/* SUBTITLE ROW */
+/* ========================= */
+/* SUBTITLE */
+.subtitle {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
 }
 
-.glass-input:focus {
-  background: rgba(0, 0, 0, 0.181);
-  border-color: rgba(255, 255, 255, 0.2);
-  outline: none;
+/* ========================= */
+/* SUBTITLE TEXT */
+/* ========================= */
+.subtitle {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.glass-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.glass-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+/* ========================= */
+/* DIVIDER LINES */
+/* ========================= */
+.line {
+  height: 1px;
+  width: 80px;
+  background: rgba(255,255,255,0.5);
 }

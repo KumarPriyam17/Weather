@@ -33,9 +33,7 @@ export default function HeroWeather({ data }: HeroWeatherProps) {
                 </div>
 
                 <div className="flex items-center gap-8 mb-6">
-                    <h1 className="text-[7rem] font-bold leading-none tracking-tighter bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
-                        {data.temperature}°
-                    </h1>
+                    <h1 className="text-[7rem] font-bold leading-none tracking-tight text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{data.temperature}°</h1>
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
